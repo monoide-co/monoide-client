@@ -3,13 +3,13 @@ import { Container, Text, Grid } from '@chakra-ui/react';
 import { CardType01 } from 'components/cards/CardType01/CardType01';
 import { LoginForm } from './LoginForm/LoginForm';
 
-type loginSchema = {
+type TLoginSchema = {
   email: string;
   password: string;
 };
 
 export const Login = () => {
-  const handleSubmit = ({ email, password }: loginSchema) => {
+  const handleSubmit = ({ email, password }: TLoginSchema) => {
     console.log(email, password);
   };
   return (

@@ -7,7 +7,8 @@ import {
   SimpleGrid,
   Text,
 } from '@chakra-ui/react';
-import { DividerWithText } from 'components/texts/DividerWithText/DividerWithText';
+import { DividerWithText } from 
+  'components/texts/DividerWithText/DividerWithText';
 import { FacebookIcon, GithubIcon, GoogleIcon } from 'components/icons';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';

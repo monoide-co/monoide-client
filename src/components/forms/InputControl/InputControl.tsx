@@ -6,7 +6,7 @@ import {
   FormErrorMessage,
 } from '@chakra-ui/react';
 
-interface InputControlProps {
+export interface InputControlProps {
   id?: string;
   name?: string;
   type?: string;
