@@ -1,18 +1,15 @@
 import React from 'react';
-import { Container, Text, Grid } from '@chakra-ui/react';
-import { CardType01 } from 'components/cards/CardType01';
 import { Link } from 'react-router-dom';
-import { LoginForm } from './LoginForm/LoginForm';
+import { Container, Text, Grid } from '@chakra-ui/react';
 
-type TLoginSchema = {
-  email: string;
-  password: string;
-};
+import { CardType01 } from 'components/cards/CardType01';
+import { RegisterForm } from './RegisterForm';
 
-export const Login = () => {
-  const handleSubmit = ({ email, password }: TLoginSchema) => {
-    console.log(email, password);
+export const Register = () => {
+  const submitHandler = () => {
+    //
   };
+
   return (
     <Container
       display="flex"
@@ -22,7 +19,7 @@ export const Login = () => {
     >
       <Grid w={['sm', 'md']}>
         <Text fontSize="4xl" fontWeight="extrabold" align="center">
-          Inicia sesión
+          Crea una cuenta
         </Text>
         <Text
           fontSize="md"
@@ -32,15 +29,15 @@ export const Login = () => {
           textAlign="center"
           verticalAlign="medium"
         >
-          <Text as="span">¿Aún no tienes una cuenta? </Text>
-          <Link to="/register">
+          <Text as="span">¿Ya estas registrado? </Text>
+          <Link to="/login">
             <Text as="u" color="orange.500">
-              crea una
+              Inicia sesión
             </Text>
           </Link>
         </Text>
         <CardType01>
-          <LoginForm onSubmit={handleSubmit} />
+          <RegisterForm onSubmit={submitHandler} />
         </CardType01>
       </Grid>
     </Container>

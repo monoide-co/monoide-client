@@ -1,40 +1,42 @@
 import React from 'react';
 import {
+  Stack,
   FormControl,
   Button,
-  Stack,
-  VisuallyHidden,
   SimpleGrid,
-  Text,
+  VisuallyHidden,
 } from '@chakra-ui/react';
-import { DividerWithText } from 'components/texts/DividerWithText/DividerWithText';
-import { FacebookIcon, GithubIcon, GoogleIcon } from 'components/icons';
-import { useFormik } from 'formik';
-import * as Yup from 'yup';
 import { InputControl } from 'components/forms/InputControl';
+import { FacebookIcon, GithubIcon, GoogleIcon } from 'components/icons';
+import { DividerWithText } from 'components/texts/DividerWithText';
+import { useFormik } from 'formik';
 
-const loginSchema = Yup.object().shape({
-  email: Yup.string().required(),
-  password: Yup.string().required(),
-});
-
-interface LoginFormProps {
+interface Props {
   onSubmit(param: { email: string; password: string }): void;
 }
 
-export const LoginForm = ({ onSubmit }: LoginFormProps) => {
+export const RegisterForm = ({ onSubmit }: Props) => {
   const formik = useFormik({
     initialValues: {
+      fullname: '',
       email: '',
       password: '',
+      confirmPassword: '',
     },
-    validationSchema: loginSchema,
     onSubmit,
   });
-
   return (
-    <form onSubmit={formik.handleSubmit}>
+    <form>
       <Stack spacing={3}>
+        <InputControl
+          id="fullname"
+          type="text"
+          label="Ingresa tu nombre"
+          error={formik.errors.fullname}
+          touched={formik.touched.fullname}
+          value={formik.values.fullname}
+          onChange={formik.handleChange}
+        />
         <InputControl
           id="email"
           type="email"
@@ -53,26 +55,32 @@ export const LoginForm = ({ onSubmit }: LoginFormProps) => {
           value={formik.values.password}
           onChange={formik.handleChange}
         />
-        <Text as="u" color="orange.500" fontWeight="semibold" fontSize="sm">
-          Forgot your password?
-        </Text>
+        <InputControl
+          id="confirmPasword"
+          type="password"
+          label="Confirma tu contraseña"
+          error={formik.errors.confirmPassword}
+          touched={formik.touched.confirmPassword}
+          value={formik.values.confirmPassword}
+          onChange={formik.handleChange}
+        />
         <FormControl id="login-button">
           <Button type="submit" isFullWidth colorScheme="orange">
-            Sign in
+            Sign up
           </Button>
         </FormControl>
-        <DividerWithText>Ingresar usando...</DividerWithText>
+        <DividerWithText>Registrate usando...</DividerWithText>
         <SimpleGrid mt="6" columns={3} spacing="3">
           <Button color="currentColor" variant="outline">
-            <VisuallyHidden>Login with Facebook</VisuallyHidden>
+            <VisuallyHidden>Register with Facebook</VisuallyHidden>
             <FacebookIcon />
           </Button>
           <Button color="currentColor" variant="outline">
-            <VisuallyHidden>Login with Google</VisuallyHidden>
+            <VisuallyHidden>Register with Google</VisuallyHidden>
             <GoogleIcon />
           </Button>
           <Button color="currentColor" variant="outline">
-            <VisuallyHidden>Login with Github</VisuallyHidden>
+            <VisuallyHidden>Register with Github</VisuallyHidden>
             <GithubIcon />
           </Button>
         </SimpleGrid>

@@ -2,6 +2,7 @@ import * as React from 'react';
 import { ChakraProvider, theme } from '@chakra-ui/react';
 
 import { Login } from 'pages/AuthenticationPages/Login';
+import { Register } from 'pages/AuthenticationPages/Register';
 import {
   BrowserRouter as Router,
   Redirect,
@@ -17,6 +18,7 @@ export const App: React.FC = () => (
       <Switch>
         <Route exact path="/" render={() => <Redirect to="/login" />} />
         <Route exact path="/login" component={Login} />
+        <Route exact path="/register" component={Register} />
       </Switch>
     </Router>
   </ChakraProvider>
