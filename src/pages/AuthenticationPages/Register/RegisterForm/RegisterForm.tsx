@@ -10,9 +10,25 @@ import { InputControl } from 'components/forms/InputControl';
 import { FacebookIcon, GithubIcon, GoogleIcon } from 'components/icons';
 import { DividerWithText } from 'components/texts/DividerWithText';
 import { useFormik } from 'formik';
+import * as Yup from 'yup';
+
+const registerSchema = Yup.object().shape({
+  fullname: Yup.string().required(),
+  email: Yup.string().required(),
+  password: Yup.string().required(),
+  confirmPassword: Yup.string().oneOf(
+    [Yup.ref('password'), null],
+    'Las contraseñas deben coincidir'
+  ),
+});
 
 interface Props {
-  onSubmit(param: { email: string; password: string }): void;
+  onSubmit(param: {
+    fullname: string;
+    email: string;
+    password: string;
+    confirmPassword: string;
+  }): void;
 }
 
 export const RegisterForm = ({ onSubmit }: Props) => {
@@ -23,10 +39,11 @@ export const RegisterForm = ({ onSubmit }: Props) => {
       password: '',
       confirmPassword: '',
     },
+    validationSchema: registerSchema,
     onSubmit,
   });
   return (
-    <form>
+    <form onSubmit={formik.handleSubmit}>
       <Stack spacing={3}>
         <InputControl
           id="fullname"
@@ -56,7 +73,7 @@ export const RegisterForm = ({ onSubmit }: Props) => {
           onChange={formik.handleChange}
         />
         <InputControl
-          id="confirmPasword"
+          id="confirmPassword"
           type="password"
           label="Confirma tu contraseña"
           error={formik.errors.confirmPassword}

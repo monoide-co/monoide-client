@@ -9,7 +9,10 @@ import {
   Route,
   Switch,
 } from 'react-router-dom';
+import { mockServer } from 'mockServer';
 import { ColorModeSwitcher } from './ColorModeSwitcher';
+
+mockServer();
 
 export const App: React.FC = () => (
   <ChakraProvider theme={theme}>

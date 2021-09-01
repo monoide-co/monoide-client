@@ -6,8 +6,8 @@ import { CardType01 } from 'components/cards/CardType01';
 import { RegisterForm } from './RegisterForm';
 
 export const Register = () => {
-  const submitHandler = () => {
-    //
+  const submitHandler = (user: any) => {
+    console.log(user);
   };
 
   return (
