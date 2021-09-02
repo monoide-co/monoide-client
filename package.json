@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@apollo/client": "^3.4.10",
     "@chakra-ui/icons": "^1.0.15",
     "@chakra-ui/react": "^1.0.0",
     "@emotion/react": "^11.0.0",
@@ -16,6 +17,7 @@
     "@types/react-dom": "^16.9.0",
     "formik": "^2.2.9",
     "framer-motion": "^4.0.0",
+    "graphql": "^15.5.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^3.0.0",
@@ -80,5 +82,8 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "miragejs": "^0.1.41",
     "prettier": "^2.3.2"
+  },
+  "volta": {
+    "node": "16.8.0"
   }
 }
