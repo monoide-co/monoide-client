@@ -1,18 +1,33 @@
-import React from 'react';
-import { Container, Text, Grid } from '@chakra-ui/react';
-import { CardType01 } from 'components/cards/CardType01';
-import { Link } from 'react-router-dom';
-import { LoginForm } from './LoginForm/LoginForm';
+import React from "react";
+import { Container, Text, Grid } from "@chakra-ui/react";
+import { CardType01 } from "components/cards/CardType01";
+import { Link } from "react-router-dom";
+import { gql, useQuery } from "@apollo/client";
+import { LoginForm } from "./LoginForm/LoginForm";
 
 type TLoginSchema = {
   email: string;
   password: string;
 };
 
+const TEST_QUERY = gql`
+  query GetAllCharacters {
+    characters(page: 1) {
+      results {
+        name
+        gender
+      }
+    }
+  }
+`;
+
 export const Login = () => {
   const handleSubmit = ({ email, password }: TLoginSchema) => {
     console.log(email, password);
   };
+
+  const { loading, error, data } = useQuery(TEST_QUERY);
+
   return (
     <Container
       display="flex"
@@ -20,7 +35,8 @@ export const Login = () => {
       justifyContent="center"
       flexDirection="column"
     >
-      <Grid w={['sm', 'md']}>
+      {data && console.log(data)}
+      <Grid w={["sm", "md"]}>
         <Text fontSize="4xl" fontWeight="extrabold" align="center">
           Inicia sesión
         </Text>
