@@ -11,20 +11,20 @@ import * as React from 'react';
 export const DividerWithText: React.FC = (props: FlexProps) => {
   const { children } = props;
   return (
-    <Flex align="center" color="gray.300">
-      <Box flex="1">
-        <Divider borderColor="currentcolor" />
+    <Flex align='center' color='gray.300'>
+      <Box flex='1'>
+        <Divider borderColor='currentcolor' />
       </Box>
       <Text
-        as="span"
-        px="3"
+        as='span'
+        px='3'
         color={useColorModeValue('gray.600', 'gray.400')}
-        fontWeight="medium"
+        fontWeight='medium'
       >
         {children}
       </Text>
-      <Box flex="1">
-        <Divider borderColor="currentcolor" />
+      <Box flex='1'>
+        <Divider borderColor='currentcolor' />
       </Box>
     </Flex>
   );

@@ -16,12 +16,12 @@ mockServer();
 
 export const App: React.FC = () => (
   <ChakraProvider theme={theme}>
-    <ColorModeSwitcher justifySelf="flex-end" />
+    <ColorModeSwitcher justifySelf='flex-end' />
     <Router>
       <Switch>
-        <Route exact path="/" render={() => <Redirect to="/login" />} />
-        <Route exact path="/login" component={Login} />
-        <Route exact path="/register" component={Register} />
+        <Route exact path='/' render={() => <Redirect to='/login' />} />
+        <Route exact path='/login' component={Login} />
+        <Route exact path='/register' component={Register} />
       </Switch>
     </Router>
   </ChakraProvider>

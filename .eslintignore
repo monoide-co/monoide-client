@@ -1,7 +1,2 @@
 *.css
 *.svg
-src/stories/**
-src/components/**/*.stories.tsx
-src/components/**/*.stories.ts
-src/components/**/*.stories.js
-src/components/**/*.stories.jsx

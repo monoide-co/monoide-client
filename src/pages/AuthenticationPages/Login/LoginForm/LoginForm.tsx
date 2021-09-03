@@ -36,42 +36,42 @@ export const LoginForm = ({ onSubmit }: LoginFormProps) => {
     <form onSubmit={formik.handleSubmit}>
       <Stack spacing={3}>
         <InputControl
-          id="email"
-          type="email"
-          label="Dirección de correo"
+          id='email'
+          type='email'
+          label='Dirección de correo'
           error={formik.errors.email}
           touched={formik.touched.email}
           value={formik.values.email}
           onChange={formik.handleChange}
         />
         <InputControl
-          id="password"
-          type="password"
-          label="Contraseña"
+          id='password'
+          type='password'
+          label='Contraseña'
           error={formik.errors.password}
           touched={formik.touched.password}
           value={formik.values.password}
           onChange={formik.handleChange}
         />
-        <Text as="u" color="orange.500" fontWeight="semibold" fontSize="sm">
+        <Text as='u' color='orange.500' fontWeight='semibold' fontSize='sm'>
           Forgot your password?
         </Text>
-        <FormControl id="login-button">
-          <Button type="submit" isFullWidth colorScheme="orange">
+        <FormControl id='login-button'>
+          <Button type='submit' isFullWidth colorScheme='orange'>
             Sign in
           </Button>
         </FormControl>
         <DividerWithText>Ingresar usando...</DividerWithText>
-        <SimpleGrid mt="6" columns={3} spacing="3">
-          <Button color="currentColor" variant="outline">
+        <SimpleGrid mt='6' columns={3} spacing='3'>
+          <Button color='currentColor' variant='outline'>
             <VisuallyHidden>Login with Facebook</VisuallyHidden>
             <FacebookIcon />
           </Button>
-          <Button color="currentColor" variant="outline">
+          <Button color='currentColor' variant='outline'>
             <VisuallyHidden>Login with Google</VisuallyHidden>
             <GoogleIcon />
           </Button>
-          <Button color="currentColor" variant="outline">
+          <Button color='currentColor' variant='outline'>
             <VisuallyHidden>Login with Github</VisuallyHidden>
             <GithubIcon />
           </Button>

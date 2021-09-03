@@ -1,1 +1,1 @@
-export { CardType01 } from './CardType01'
+export { CardType01 } from './CardType01';

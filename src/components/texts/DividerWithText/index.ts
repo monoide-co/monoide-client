@@ -1,1 +1,1 @@
-export { DividerWithText } from './DividerWithText'
+export { DividerWithText } from './DividerWithText';
