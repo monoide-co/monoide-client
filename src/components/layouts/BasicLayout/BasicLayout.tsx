@@ -1,8 +1,6 @@
 import React from 'react';
 import { Grid } from '@chakra-ui/react';
 
-import './BasicLayout.style.scss';
-
 export interface BasicLayoutProps {
   children: React.ReactNode;
 }
