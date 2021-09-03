@@ -12,26 +12,26 @@ export const Register = () => {
 
   return (
     <Container
-      display="flex"
-      alignItems="center"
-      justifyContent="center"
-      flexDirection="column"
+      display='flex'
+      alignItems='center'
+      justifyContent='center'
+      flexDirection='column'
     >
       <Grid w={['sm', 'md']}>
-        <Text fontSize="4xl" fontWeight="extrabold" align="center">
+        <Text fontSize='4xl' fontWeight='extrabold' align='center'>
           Crea una cuenta
         </Text>
         <Text
-          fontSize="md"
-          fontWeight="medium"
-          mt="4"
-          mb="8"
-          textAlign="center"
-          verticalAlign="medium"
+          fontSize='md'
+          fontWeight='medium'
+          mt='4'
+          mb='8'
+          textAlign='center'
+          verticalAlign='medium'
         >
-          <Text as="span">¿Ya estas registrado? </Text>
-          <Link to="/login">
-            <Text as="u" color="orange.500">
+          <Text as='span'>¿Ya estas registrado? </Text>
+          <Link to='/login'>
+            <Text as='u' color='orange.500'>
               Inicia sesión
             </Text>
           </Link>

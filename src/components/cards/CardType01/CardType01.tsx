@@ -6,11 +6,11 @@ export interface ICard {
 }
 export const CardType01: React.FC = ({ children }) => (
   <Box
-    py="8"
+    py='8'
     px={{ base: '4', md: '10' }}
-    shadow="base"
+    shadow='base'
     rounded={{ sm: 'lg' }}
-    background="whiteAlpha.100"
+    background='whiteAlpha.100'
     // borderColor="gray.100"
     // border="1px solid gray.500"
   >
