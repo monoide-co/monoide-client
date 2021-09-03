@@ -6,8 +6,13 @@ import { CardType01 } from 'components/cards/CardType01';
 import { RegisterForm } from './RegisterForm';
 
 export const Register = () => {
-  const submitHandler = (user: any) => {
-    console.log(user);
+  const submitHandler = (user: {
+    fullname: string;
+    email: string;
+    password: string;
+    confirmPassword: string;
+  }) => {
+    console.log(user); // eslint-disable-line
   };
 
   return (

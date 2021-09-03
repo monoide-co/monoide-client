@@ -9,7 +9,7 @@ export default {
   component: InputControl,
 } as ComponentMeta<typeof InputControl>;
 
-const Template: ComponentStory<typeof InputControl> = args => (
+const Template: ComponentStory<typeof InputControl> = (args) => (
   <ChakraProvider theme={theme}>
     <InputControl {...args} />
   </ChakraProvider>

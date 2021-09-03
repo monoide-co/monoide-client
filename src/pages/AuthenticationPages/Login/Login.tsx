@@ -11,7 +11,7 @@ type TLoginSchema = {
 
 export const Login = () => {
   const handleSubmit = ({ email, password }: TLoginSchema) => {
-    console.log(email, password);
+    console.log(email, password); // eslint-disable-line
   };
   return (
     <Container
