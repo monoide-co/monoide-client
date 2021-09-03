@@ -1,0 +1,7 @@
+{
+  "syntax": "css-in-js",
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "indentation": 2
+  }
+}

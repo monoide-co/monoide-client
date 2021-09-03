@@ -24,6 +24,7 @@
     "react-router-dom": "^5.2.1",
     "react-scripts": "4.0.3",
     "sass": "^1.37.5",
+    "styled-components": "^5.3.1",
     "typescript": "^3.9.5",
     "web-vitals": "^0.2.2",
     "yup": "^0.32.9"
@@ -33,6 +34,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "lint:styles": "stylelint src/**/*.ts src/**/*.tsx",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public"
   },
@@ -70,6 +72,7 @@
     "@storybook/preset-create-react-app": "^3.2.0",
     "@storybook/react": "^6.3.7",
     "@types/react-router-dom": "^5.1.8",
+    "@types/styled-components": "^5.1.13",
     "@typescript-eslint/eslint-plugin": "^4.28.4",
     "@typescript-eslint/parser": "^4.28.4",
     "eslint": "^7.31.0",
@@ -81,7 +84,10 @@
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "miragejs": "^0.1.41",
-    "prettier": "^2.3.2"
+    "prettier": "^2.3.2",
+    "storybook-addon-designs": "^6.1.0",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^22.0.0"
   },
   "volta": {
     "node": "16.8.0"
