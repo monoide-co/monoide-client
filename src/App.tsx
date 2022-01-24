@@ -1,27 +1,25 @@
 import * as React from 'react';
-import { ChakraProvider, theme } from '@chakra-ui/react';
+import { ChakraProvider } from '@chakra-ui/react';
+import theme from 'styles/monoideTheme';
 
 import { Login } from 'pages/AuthenticationPages/Login';
 import { Register } from 'pages/AuthenticationPages/Register';
-import {
-  BrowserRouter as Router,
-  Redirect,
-  Route,
-  Switch,
-} from 'react-router-dom';
+import { MyCourses } from 'pages/MyCourses';
+
+import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom';
 import { mockServer } from 'mockServer';
-import { ColorModeSwitcher } from './ColorModeSwitcher';
 
 mockServer();
 
 export const App: React.FC = () => (
   <ChakraProvider theme={theme}>
-    <ColorModeSwitcher justifySelf='flex-end' />
+    {/* <ColorModeSwitcher justifySelf='flex-end' /> */}
     <Router>
       <Switch>
         <Route exact path='/' render={() => <Redirect to='/login' />} />
         <Route exact path='/login' component={Login} />
         <Route exact path='/register' component={Register} />
+        <Route exact path='/dashboard' component={MyCourses} />
       </Switch>
     </Router>
   </ChakraProvider>
