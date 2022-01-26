@@ -33,22 +33,30 @@ export const MainSideBar = () => (
       </Stack>
     </Flex>
 
-    <Stack className='sidebar-options' p='24px 0 12px 0' spacing='32px'>
-      <Flex alignItems='center' gridGap='12px'>
-        <DragHandleIcon /> <Text>My courses</Text>
-      </Flex>
+    <Flex
+      className='sidebar-options'
+      p='24px 0 12px 0'
+      justify='space-between'
+      direction='column'
+      h='100%'
+    >
+      <Grid gridGap='32px'>
+        <Flex alignItems='center' gridGap='12px'>
+          <DragHandleIcon /> <Text>My courses</Text>
+        </Flex>
 
-      <Flex alignItems='center' gridGap='12px'>
-        <CalendarIcon /> <Text>Courses</Text>
-      </Flex>
+        <Flex alignItems='center' gridGap='12px'>
+          <CalendarIcon /> <Text>Courses</Text>
+        </Flex>
 
-      <Flex alignItems='center' gridGap='12px'>
-        <AtSignIcon /> <Text>Community</Text>
-      </Flex>
+        <Flex alignItems='center' gridGap='12px'>
+          <AtSignIcon /> <Text>Community</Text>
+        </Flex>
+      </Grid>
 
       <Flex alignItems='center' gridGap='12px'>
         <ExternalLinkIcon /> <Text>Logout</Text>
       </Flex>
-    </Stack>
+    </Flex>
   </Stack>
 );

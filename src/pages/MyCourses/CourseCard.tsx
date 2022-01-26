@@ -22,7 +22,14 @@ export const CourseCard = ({
   deadlineIn,
   tags,
 }: CourseCardProps) => (
-  <Box maxW='md' borderWidth='1px' borderRadius='lg' overflow='hidden' bg='white'>
+  <Box
+    maxW='md'
+    borderWidth='1px'
+    borderRadius='lg'
+    overflow='hidden'
+    bg='white'
+    boxShadow='md'
+  >
     <Image src={courseImg} alt='alt' boxSize='200px' w='100%' objectFit='cover' />
 
     <Box p='6'>
