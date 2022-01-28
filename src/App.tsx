@@ -10,18 +10,20 @@ import {
   Switch,
 } from 'react-router-dom';
 import { mockServer } from 'mockServer';
-import { ColorModeSwitcher } from './ColorModeSwitcher';
+import { Lesson } from './pages/Lesson';
+// import { ColorModeSwitcher } from './ColorModeSwitcher';
 
 mockServer();
 
 export const App: React.FC = () => (
   <ChakraProvider theme={theme}>
-    <ColorModeSwitcher justifySelf='flex-end' />
+    {/* <ColorModeSwitcher justifySelf='flex-end' /> */}
     <Router>
       <Switch>
         <Route exact path='/' render={() => <Redirect to='/login' />} />
         <Route exact path='/login' component={Login} />
         <Route exact path='/register' component={Register} />
+        <Route exact path='/lesson' component={Lesson} />
       </Switch>
     </Router>
   </ChakraProvider>
