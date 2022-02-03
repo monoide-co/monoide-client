@@ -6,7 +6,7 @@ import { Login } from 'pages/AuthenticationPages/Login';
 import { Register } from 'pages/AuthenticationPages/Register';
 import { MyCourses } from 'pages/MyCourses';
 import { Sections } from 'pages/Sections';
-import { Tasks } from 'pages/Tasks';
+import { Challenges } from 'pages/Challenges';
 
 import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom';
 import { mockServer } from 'mockServer';
@@ -24,7 +24,7 @@ export const App: React.FC = () => (
         <Route exact path='/dashboard' component={MyCourses} />
         <Route exact path='/sections/:courseId' component={Sections} />
         <Route exact path='/sections/:courseId' component={Sections} />
-        <Route exact path='/sections/:courseId/tasks' component={Tasks} />
+        <Route exact path='/sections/:courseId/challenges' component={Challenges} />
       </Switch>
     </Router>
   </ChakraProvider>

@@ -1,4 +1,4 @@
-export const mockTasks = [
+export const mockChallenges = [
   {
     id: 'ia2_01',
     title: "Let's start!!!",

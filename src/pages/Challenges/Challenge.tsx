@@ -25,7 +25,7 @@ type TaskProps = {
   code: string[];
 };
 
-export const Task = ({
+export const Challenge = ({
   title,
   description,
   score,
@@ -79,8 +79,10 @@ export const Task = ({
       </Flex>
 
       <Stack>
-        <Text>Score: {score}%</Text>
-        <Progress value={score} mt='6px' />
+        <Text fontWeight='bold' textAlign='center' color='green.400'>
+          {score}%
+        </Text>
+        <Progress value={score} mt='6px' colorScheme='green' />
       </Stack>
     </Stack>
   </Grid>

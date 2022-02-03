@@ -15,6 +15,7 @@ export const MainSideBar = () => (
     borderColor='gray.200'
     p='12px 20px'
     boxShadow='lg'
+    // position='fixed'
   >
     <Flex
       className='sidebar-avatar'
